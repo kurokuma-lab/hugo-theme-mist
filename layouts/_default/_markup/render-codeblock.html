@@ -25,3 +25,7 @@
         {{ $result.Wrapped }}
     </div>
 </div>
+
+
+{{ $result := transform.HighlightCodeBlock . }}
+{{ $result.Wrapped }}
