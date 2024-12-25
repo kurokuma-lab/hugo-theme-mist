@@ -34,7 +34,6 @@
 .container{max-width:1536px;}
 }
 /* layer: default */
-.relative{position:relative;}
 [fixed~="\~"]{position:fixed;}
 [bottom~="\38 "]{bottom:2rem;}
 [right~="\38 "]{right:2rem;}
@@ -86,8 +85,7 @@
 [justify-center=""],
 [justify~="center"]{justify-content:center;}
 .justify-between,
-[flex~="justify-between"],
-[justify~="between"]{justify-content:space-between;}
+[flex~="justify-between"]{justify-content:space-between;}
 .gap-2,
 [flex~="gap-2"],
 [gap~="\32 "]{gap:0.5rem;}
@@ -116,8 +114,6 @@
 [bg~="white\/80"]{background-color:rgb(255 255 255 / 0.8) /* #fff */;}
 [p~="\32 "]{padding:0.5rem;}
 [p~="\34 "]{padding:1rem;}
-[p~="x-4"]{padding-left:1rem;padding-right:1rem;}
-[p~="y-2"]{padding-top:0.5rem;padding-bottom:0.5rem;}
 [pb~="\34 "]{padding-bottom:1rem;}
 [pt~="\31 "]{padding-top:0.25rem;}
 [text~="center"]{text-align:center;}

@@ -1,8 +1,8 @@
 +++
-title = "Euler's Formula"
+title = "Understanding Euler's Formula"
 date = 2023-10-10T10:00:00-07:00
 draft = false
-tags = ['math', 'Euler', 'mermaid', 'code']
+tags = ['math', 'Euler', 'formula']
 +++
 
 Euler's formula is a fundamental equation in complex analysis that establishes a deep relationship between trigonometric functions and the complex exponential function. It is given by:
@@ -11,21 +11,23 @@ $$
 e^{ix} = \cos(x) + i\sin(x)
 $$
 
-where:
-- \( e \) is the base of the natural logarithm,
-- \( i \) is the imaginary unit, and
-- \( x \) is a real number.
-
 This formula is remarkable because it connects the exponential function with the trigonometric functions cosine and sine.
 
+## Key Components
+
+- **\( e \)**: The base of the natural logarithm
+- **\( i \)**: The imaginary unit
+- **\( x \)**: A real number
+
+## Important Values
+
 | \( x \) | \( e^{ix} \) |
-|------|--------|
-| \( 0 \)   | \( 1 \) |
-| \( \frac{\pi}{2} \) | \( i\) |
+|--------|--------------|
+| \( 0 \) | \( 1 \) |
+| \( \frac{\pi}{2} \) | \( i \) |
 | \( \pi \) | \( -1 \) |
 | \( \frac{3\pi}{2} \) | \( -i \) |
 | \( 2\pi \) | \( 1 \) |
-
 
 ## Visualizing Euler's Formula
 
@@ -65,9 +67,10 @@ Euler's formula has numerous applications in mathematics and engineering, includ
 
 Understanding Euler's formula provides a powerful tool for working with complex numbers and their applications in various fields.
 
-## Conclusion
+## Historical Context
 
-Euler's formula is a beautiful and profound equation that reveals the deep connections between exponential and trigonometric functions. By visualizing it, we can gain a better appreciation of its significance and applications.
+> "Euler's formula is arguably the most beautiful theorem in mathematics."
+> — Richard Feynman
 
 ## Euler's Formula Flowchart
 
@@ -82,13 +85,13 @@ graph TD
     E --> F[End]
 ```
 
+## Conclusion
+
+Euler's formula is a beautiful and profound equation that reveals the deep connections between exponential and trigonometric functions. By visualizing it, we can gain a better appreciation of its significance and applications.
 
 ## Text Formatting Examples
 
 Regular text can be formatted as **bold**, *italic*, or ***bold italic***. You can also use ~~strikethrough~~ for deleted text.
-
-> "Euler's formula is arguably the most beautiful theorem in mathematics."
-> — Richard Feynman
 
 ---
 
