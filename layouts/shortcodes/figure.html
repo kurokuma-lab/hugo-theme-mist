@@ -14,9 +14,8 @@
 {{ $maxWidth = (string $image.Width) }}
 {{ end }}
 
-<div class="figure-container" flex justify-center items-center>
-  <figure class="image-container" m="y-8" overflow="hidden" rounded="md" shadow="md hover:lg" display="block" p="4"
-    transition="all" duration="300" align="center" inline-block>
+<div class="figure-container" flex="~ col" items="center">
+  <figure class="image-container" overflow="hidden" rounded="md" shadow="md hover:lg" transition="all duration-300" p="4">
     <picture>
       {{ with $image }}
       {{ $maxSize := printf "%sx" $maxWidth }}
@@ -42,12 +41,12 @@
       {{ else }}
       <source srcset="{{ $target.RelPermalink }}" media="(min-width: 0px)">
       {{ end }}
-      <img src="{{ $target.RelPermalink }}" alt="{{ $alt }}" loading="lazy" w="{{ $maxWidth }}" h="auto" duration="300">
+      <img src="{{ $target.RelPermalink }}" alt="{{ $alt }}" loading="lazy" w="{{ $maxWidth }}" h="auto">
       {{ end }}
     </picture>
     {{ with $caption }}
-    <figcaption text="sm center gray-600">
-      {{ . }} {{ $image.Width}}
+    <figcaption class="caption" text="sm gray-600" text-align="center">
+      {{ . }}
     </figcaption>
     {{ end }}
   </figure>

@@ -1,0 +1,20 @@
+[home]
+other = "ホーム"
+
+[posts]
+other = "アーカイブ"
+
+[tags]
+other = "タグ"
+
+[about]
+other = "プロフィール"
+
+[prev_page]
+other = "前のページ"
+
+[next_page]
+other = "次のページ"
+
+[read_more]
+other = "続きを読む"

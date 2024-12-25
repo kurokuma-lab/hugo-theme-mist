@@ -13,6 +13,11 @@
   {{- template "cssLink" . }}
 {{- end }}
 
+{{- /* Post CSS */}}
+{{- with resources.Get "css/post.css" }}
+  {{- template "cssLink" . }}
+{{- end }}
+
 {{- /* Syntax CSS */}}
 {{- with resources.Get "css/syntax_nord.css" }}
   {{- template "cssLink" . }}

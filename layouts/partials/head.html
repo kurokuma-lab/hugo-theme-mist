@@ -4,11 +4,16 @@
 <meta name="author"
     content="{{- if .Params.author }}{{- .Params.author | safeHTML }}{{- else }}{{- .Site.Params.Author.name | safeHTML }}{{- end }}" />
 {{- $title := ( .Title ) }}
+{{- range .Site.Menus.main }}
+  {{- if eq (lower .Identifier) (lower $title) }}
+    {{- $title = i18n .Identifier }}
+  {{- end }}
+{{ end }}
 {{- $siteTitle := ( .Site.Title ) }}
 {{- if .IsHome }}
-<title>{{- $siteTitle }} {{- if isset .Site.Params "subtitle" }}｜ {{- .Site.Params.Subtitle }}{{- end }} </title>
+    <title>{{- $siteTitle }} {{- if isset .Site.Params "subtitle" }}｜ {{- .Site.Params.Subtitle }}{{- end }} </title>
 {{- else }}
-<title>{{- $title }} ｜ {{- $siteTitle }}</title>
+    <title>{{- $title }} ｜ {{- $siteTitle }}</title>
 {{- end }}
 <!-- description & keywords -->
 {{- if .Description }}

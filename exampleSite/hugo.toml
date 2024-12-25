@@ -13,19 +13,19 @@ enableEmoji = true
 # Main Navigation Menu
 #-----------------------------------------------------------------------------
 [[menu.main]]
-  name = "home"
+  identifier = "home"
   weight = 10
   pageRef = "/"
 [[menu.main]]
-  name = "posts"
+  identifier = "posts"
   weight = 20
   pageRef = "/posts/"
 [[menu.main]]
-  name = "tags"
+  identifier = "tags"
   weight = 30
   pageRef = "/tags/"
 [[menu.main]]
-  name = "about"
+  identifier = "about"
   weight = 40
   pageRef = "/about/"
 
@@ -34,13 +34,13 @@ enableEmoji = true
 #-----------------------------------------------------------------------------
 [params]
   enableAnimation = true           # Enable site animations
-  subTitle = "Mist"                # Site subtitle
+  subTitle = 'Mist'                # Site subtitle
   enableSummary = true             # Display article summaries
   summaryLength = 180              # Length of article summaries
-  footerSlogan = "Eat, Play, Sleep"
-  keywords = ["Hugo", "theme", "mist"]
-  description = "Hugo theme Mist example site."
-  mainSections = ["posts", "post"]
+  footerSlogan = '天有時 地有時'     # Site slogan in footer
+  keywords = ['Hugo', 'theme', 'mist', '雲淡風輕'] # Site keywords
+  description = "Hugo theme Mist example site" # Site description
+  mainSections = ["posts", "post"] # Sections to include in main page
 
 [params.author]
   name = "Kurokuma-lab"
