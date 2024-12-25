@@ -1,8 +1,14 @@
+[home]
+other = "首頁"
+
 [posts]
 other = "文章"
 
 [tags]
 other = "標籤"
+
+[about]
+other = "關於"
 
 [prev_page]
 other = "上一頁"

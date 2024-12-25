@@ -1,8 +1,14 @@
+[home]
+other = "首页"
+
 [posts]
 other = "归档"
 
 [tags]
 other = "标签"
+
+[about]
+other = "关于"
 
 [prev_page]
 other = "上一页"
