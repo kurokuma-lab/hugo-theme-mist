@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+
 <head>
   {{ partial "head.html" . }}
 </head>
+
 <body>
-  <header>
+  <div class="container" mx="auto" max-w="sm:640px md:768px lg:1024px" bg="white" mt="sm:8 md:12 lg:16"
+    min-h="[calc(100vh-3rem)] sm:[calc(100vh-3rem)] md:[calc(100vh-5rem)] lg:[calc(100vh-6rem)]" shadow="2xl"
+    p="sm:4 md:6 lg:8" flex="~ col">
+    {{ partial "nav.html" . }}
     {{ partial "header.html" . }}
-  </header>
-  <main>
-    {{ block "main" . }}{{ end }}
-  </main>
-  <footer>
-    {{ partial "footer.html" . }}
-  </footer>
+    </header>
+
+    <main class="animate__animated animate__fadeInDown animate__slower" flex="grow">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer mt="auto">
+      <a id="back_to_top" href="#" fixed="~" bottom="8" right="8" text="gray-500 hover:gray-700" bg="white/80" p="4"
+        rounded="full" shadow="lg">
+        <i class="i-ri:arrow-up-s-line"></i>
+      </a>
+      {{ partial "footer.html" . }}
+    </footer>
+  </div>
 </body>
+{{ partial "mermaid.html" . }}
 </html>

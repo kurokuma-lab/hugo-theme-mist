@@ -1,10 +1,45 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+<div class="content" p="sm:4 md:6 lg:8">
+  <article class="post" space-y="8">
+    <header class="post_title">
+      <h2 mt="2">
+        <a href='{{ .RelPermalink }}'
+           text="2xl gray-900"
+           font="serif medium"
+           leading="snug"
+           decoration="none">
+          {{ .Title }}
+        </a>
+      </h2>
+    </header>
 
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+    <div class="post_meta" 
+         flex="~ items-center"
+         text="sm gray-500">
+      <time datetime="{{ .Date.Format "2006-01-02" }}"
+            font="mono">
+        {{ .Date.Format "2006.01.02" }}
+      </time>
+      {{ with .Params.tags }}
+      <div flex="~ gap-2 items-center" ml="4">
+        {{ range . }}
+        <a href="{{ "tags" | absURL }}/{{ . | urlize }}/"
+           text="sm gray-500 hover:gray-700"
+           decoration="none">
+          #{{ . }}
+        </a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
 
-  {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+    <div class="post_content markdown" 
+         text="gray-800"
+         leading="relaxed"
+         font="sans"
+         mt="8">
+      {{ .Content }}
+    </div>
+  </article>
+</div>
 {{ end }}

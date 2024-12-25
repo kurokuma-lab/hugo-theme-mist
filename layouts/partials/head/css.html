@@ -1,9 +1,38 @@
-{{- with resources.Get "css/main.css" }}
+{{- define "cssLink" }}
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{- else }}
     {{- with . | minify | fingerprint }}
       <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
     {{- end }}
+  {{- end }}
+{{- end }}
+
+{{- /* Site CSS */}}
+{{- with resources.Get "css/uno.css" }}
+  {{- template "cssLink" . }}
+{{- end }}
+
+{{- /* Syntax CSS */}}
+{{- with resources.Get "css/syntax_nord.css" }}
+  {{- template "cssLink" . }}
+{{- end }}
+
+{{- /* Math CSS */}}
+{{- with resources.Get "css/katex.min.css" }}
+  {{- template "cssLink" . }}
+{{- end }}
+
+{{- /* Animation CSS */}}
+{{ if .Site.Params.enableAnimation }}
+  {{- with resources.Get "css/animate.min.css" }}
+    {{- template "cssLink" . }}
+  {{- end }}
+{{ end}}
+
+{{- /* Additional Custom CSS Files */}}
+{{- range .Site.Params.customCSS }}
+  {{- with resources.Get . }}
+    {{- template "cssLink" . }}
   {{- end }}
 {{- end }}

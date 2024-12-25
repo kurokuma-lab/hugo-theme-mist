@@ -1,1 +1,54 @@
-<p>Copyright {{ now.Year }}. All rights reserved.</p>
+<footer class="footer">
+    <div class="footer-content" flex="~ col" items="center" space-y="2">
+        {{ if .Site.Params.footerSlogan }}
+        <div class="footer_slogan" text="xs gray-500 italic">
+            <span>{{ .Site.Params.footerSlogan }}</span>
+        </div>
+        {{ end }}
+
+        <div class="socials_icons" flex="~ row" gap="2" justify="center" text="gray-700">
+            {{ range $key, $val := .Site.Params.Social }}
+            {{ if $val }}
+            {{ if eq $key "github" }}
+            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:github-fill"></i></a>
+            {{ else if eq $key "twitter-x" }}
+            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:twitter-x-fill"></i></a>
+            {{ else if eq $key "facebook" }}
+            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:facebook-fill"></i></a>
+            {{ else if eq $key "instagram" }}
+            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:instagram-fill"></i></a>
+            {{ else if eq $key "bilibili" }}
+            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:bilibili-fill"></i></a>
+            {{ else if eq $key "youtube" }}
+            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:youtube-fill"></i></a>
+            {{ else if eq $key "telegram" }}
+            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:telegram-fill"></i></a>
+            {{ else if eq $key "discord" }}
+            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:discord-fill"></i></a>
+            {{ else if eq $key "tiktok" }}
+            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:tiktok-fill"></i></a>
+            {{ else if eq $key "weibo" }}
+            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:weibo-fill"></i></a>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+            <a href="{{ with .Site.Home.OutputFormats.Get "rss" }}{{ .RelPermalink }}{{ end }}" type="application/rss+xml" title="rss"
+              target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:rss-fill"></i></a>
+        </div>
+
+        <div class="copyright" text="xs gray-500">
+            &copy; {{ now.Year }} {{ .Site.Title }}
+            {{ with .Site.Author }} | {{ . }}{{ end }}
+        </div>
+
+        <div class="powered_by" flex="~ items-center" space-x="2">
+            <a href="https://github.com/kurokuma-lab" text="xs gray-500 hover:gray-700" decoration="none">
+                Theme Mist by Kurokuma-Lab
+            </a>
+            <span>•</span>
+            <a href="http://www.gohugo.io/" text="xs gray-500 hover:gray-700" decoration="none">
+                Powered by Hugo
+            </a>
+        </div>
+    </div>
+</footer>

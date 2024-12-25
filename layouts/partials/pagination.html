@@ -1,0 +1,28 @@
+{{ if or .Paginator.HasPrev .Paginator.HasNext }}
+<div class="pagination" 
+     flex="~ items-center justify-center" 
+     gap="8" 
+     mt="12">
+    {{ if .Paginator.HasPrev }}
+    <a href="{{ .Paginator.Prev.URL }}" 
+       text="gray-900 hover:gray-600"
+       decoration="none"
+       flex="~ items-center"
+       gap="2">
+        <i class="i-ri:arrow-left-s-line"></i>
+        {{ i18n "prev_page" }}
+    </a>
+    {{ end }}
+
+    {{ if .Paginator.HasNext }}
+    <a href="{{ .Paginator.Next.URL }}"
+       text="gray-900 hover:gray-600"
+       decoration="none"
+       flex="~ items-center"
+       gap="2">
+        {{ i18n "next_page" }}
+        <i class="i-ri:arrow-right-s-line"></i>
+    </a>
+    {{ end }}
+</div>
+{{ end }}

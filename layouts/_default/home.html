@@ -1,7 +1,56 @@
 {{ define "main" }}
-  {{ .Content }}
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
-{{ end }}
+<div class="content" p="sm:4 md:6 lg:8">
+  {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{ $paginator := .Paginate $pages }}
+  <div class="posts-container" space-y="16">
+    {{ range $paginator.Pages }}
+    <article class="post" border="b gray-200" pb="4">
+      <header class="post_title">
+        <h2 mt="2">
+          <a href='{{ .RelPermalink }}' text="2xl gray-900 hover:gray-600" font="serif medium" leading="snug"
+            decoration="none">
+            {{ .Title }}
+          </a>
+        </h2>
+      </header>
+      {{ if .Site.Params.enableSummary }}
+      <div class="post_summary" mt="4">
+        <p text="gray-600" leading="relaxed" font="sans">
+          {{ .Summary | truncate site.Params.summaryLength }}
+          {{ if gt (len .Summary) site.Params.summaryLength }}
+          <a href="{{ .RelPermalink }}" text="gray-900" font="sans" decoration="underline" ml="1">
+            {{ i18n "read_more" | default "Read more" }}
+          </a>
+          {{ end }}
+        </p>
+      </div>
+      {{ else }}
+      <div class="post_full" mt="4">
+        <p text="gray-600" leading="relaxed">
+          {{ .Content }}
+        </p>
+      </div>
+      {{ end }}
+      <div class="post_meta" mt="4" flex="~ items-center justify-between" text="sm gray-500">
+        <div flex="~ items-center gap-2">
+          <time datetime="{{ .Date.Format " 2006-01-02" }}" font="mono">
+            {{ .Date.Format "2006.01.02" }}
+          </time>
+          {{ with .Params.tags }}
+          <i class="i-ri:price-tag-3-line" ml="2" text="gray-400"></i>
+          <div flex="~ gap-2">
+            {{ range . }}
+            <a href="{{ " tags" | absURL }}/{{ . | urlize }}/" text="sm gray-500 hover:gray-700" decoration="none">
+              #{{ . }}
+            </a>
+            {{ end }}
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+  {{ partial "pagination.html" . }}
+</div>
+{{ end}}
