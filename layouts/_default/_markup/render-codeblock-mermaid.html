@@ -1,13 +1,18 @@
 <div class="mermaid_container"
-     text="gray-800"
-     leading="relaxed" 
-     font="mono"
-     rounded="lg"
-     overflow="hidden"
-     shadow="sm"
-     p="0">
-    <pre class="mermaid" m="0" overflow-x="auto">
-        {{- .Inner | htmlEscape | safeHTML }}
-    </pre>
+     m="y-6"
+     w="full"
+     flex="~"
+     justify="center">
+    <div class="mermaid_wrapper"
+         min-w="60%"
+         max-w="90%"
+         flex="~"
+         justify="center">
+        <pre class="mermaid" 
+             m="0" 
+             p="4">
+            {{- .Inner | htmlEscape | safeHTML }}
+        </pre>
+    </div>
     {{ .Page.Store.Set "hasMermaid" true }}
 </div>

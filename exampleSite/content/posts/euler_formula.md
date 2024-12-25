@@ -18,6 +18,15 @@ where:
 
 This formula is remarkable because it connects the exponential function with the trigonometric functions cosine and sine.
 
+| \( x \) | \( e^{ix} \) |
+|------|--------|
+| \( 0 \)   | \( 1 \) |
+| \( \frac{\pi}{2} \) | \( i\) |
+| \( \pi \) | \( -1 \) |
+| \( \frac{3\pi}{2} \) | \( -i \) |
+| \( 2\pi \) | \( 1 \) |
+
+
 ## Visualizing Euler's Formula
 
 To better understand Euler's formula, we can visualize it using Python. Below is a Python code snippet that plots Euler's formula on the complex plane.
@@ -72,3 +81,31 @@ graph TD
     D --> E[Gain a deeper appreciation of its significance]
     E --> F[End]
 ```
+
+
+## Text Formatting Examples
+
+Regular text can be formatted as **bold**, *italic*, or ***bold italic***. You can also use ~~strikethrough~~ for deleted text.
+
+> "Euler's formula is arguably the most beautiful theorem in mathematics."
+> — Richard Feynman
+
+---
+
+## List Examples
+
+Here are some key mathematical constants:
+* π (pi): approximately 3.14159
+  * Used in geometry and trigonometry
+  * Appears in Euler's formula
+* e (Euler's number): approximately 2.71828
+  * Base of natural logarithms
+  * Also appears in Euler's formula
+
+1. First discovered by Euler in 1748
+2. Published in his work *Introductio in analysin infinitorum*
+3. Extended by many mathematicians since then
+
+## References
+
+For more information, check out the [Wikipedia article on Euler's formula](https://en.wikipedia.org/wiki/Euler%27s_formula).
