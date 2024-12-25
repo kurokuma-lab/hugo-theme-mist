@@ -13,19 +13,19 @@ enableEmoji = true
 # Main Navigation Menu
 #-----------------------------------------------------------------------------
 [[menu.main]]
-  name = "home"
+  identifier = "home"
   weight = 10
   pageRef = "/"
 [[menu.main]]
-  name = "posts"
+  identifier = "posts"
   weight = 20
   pageRef = "/posts/"
 [[menu.main]]
-  name = "tags"
+  identifier = "tags"
   weight = 30
   pageRef = "/tags/"
 [[menu.main]]
-  name = "about"
+  identifier = "about"
   weight = 40
   pageRef = "/about/"
 
