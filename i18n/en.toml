@@ -1,8 +1,14 @@
+[home]
+other = "Home"
+
 [posts]
 other = "Posts"
 
 [tags]
 other = "Tags"
+
+[about]
+other = "About"
 
 [prev_page]
 other = "Previous"

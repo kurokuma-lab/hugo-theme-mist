@@ -1,48 +1,53 @@
+#-----------------------------------------------------------------------------
+# Site Configuration
+#-----------------------------------------------------------------------------
 baseURL = 'http://localhost:1313/'
 languageCode = "zh"
-defaultContentLanguage = "zh-tw"
+defaultContentLanguage = "zh-tw"    # Default content language, corresponds to translation files in the i18n folder. Users can add new translation files to support additional languages.
 theme = 'mist'
-title = "雲淡風輕"                        # site title                     # 网站标题
-hasCJKLanguage = true                  # has chinese/japanese/korean ?  # 自动检测是否包含 中文\日文\韩文
+title = "雲淡風輕"                    # Site title
+hasCJKLanguage = true               # Enable Chinese/Japanese/Korean language support
 enableEmoji = true
 
-
-# The main menu configuration for the website.
-# Each menu item is defined as a TOML table with the following fields:
-#   name: The display name of the menu item.
-#   weight: The order in which the menu items are displayed, with lower numbers appearing first.
-#   pageRef: The path to the page that the menu item links to.
-[[menu.main]]                          # config your menu               # 配置菜单
-  name = "首頁"
+#-----------------------------------------------------------------------------
+# Main Navigation Menu
+#-----------------------------------------------------------------------------
+[[menu.main]]
+  name = "home"
   weight = 10
   pageRef = "/"
 [[menu.main]]
-  name = "文章"
+  name = "posts"
   weight = 20
   pageRef = "/posts/"
 [[menu.main]]
-  name = "標籤"
+  name = "tags"
   weight = 30
   pageRef = "/tags/"
 [[menu.main]]
-  name = "關於"
+  name = "about"
   weight = 40
   pageRef = "/about/"
-[pagination]
-  pagerSize = 4
+
+#-----------------------------------------------------------------------------
+# Site Parameters
+#-----------------------------------------------------------------------------
 [params]
-  enableAnimation = true  # enable animation             # 是否使用动画
-  subTitle = "Mist"                                       # site's subTitle              # 网站二级标题
-  enableSummary = true                                                 # display the article summary  # 是否显示文章摘要
-  summaryLength = 180  # Optional, defaults to 180 if not specified
-  footerSlogan = "Eat, Play, Sleep"                                   # site's footer slogan         # 网站页脚标语
-  keywords = ["Hugo","theme","mist"]                                   # site's keywords              # 网站关键字
-  description = "Hugo theme Mist example site."                        # site's description           # 网站描述
-  mainSections = ["posts","post"] 
+  enableAnimation = true           # Enable site animations
+  subTitle = "Mist"                # Site subtitle
+  enableSummary = true             # Display article summaries
+  summaryLength = 180              # Length of article summaries
+  footerSlogan = "Eat, Play, Sleep"
+  keywords = ["Hugo", "theme", "mist"]
+  description = "Hugo theme Mist example site."
+  mainSections = ["posts", "post"]
+
 [params.author]
   name = "Kurokuma-lab"
-# Your socail's url
-# 社交地址配置
+
+#-----------------------------------------------------------------------------
+# Social Media Links (delete unused ones)
+#-----------------------------------------------------------------------------
 [params.social]
   bilibili = "https://space.bilibili.com/fake-2543"
   discord = "https://discord.gg/fake-2543"
@@ -54,6 +59,16 @@ enableEmoji = true
   twitter-x = "https://twitter.com/fake_user_2452"
   weibo = "https://weibo.com/u/fake-3564"
   youtube = "https://www.youtube.com/channel/fake-2532"
+
+#-----------------------------------------------------------------------------
+# Pagination Settings
+#-----------------------------------------------------------------------------
+[pagination]
+  pagerSize = 4
+
+#-----------------------------------------------------------------------------
+# Markup Configuration
+#-----------------------------------------------------------------------------
 [markup]
   [markup.highlight]
     codeFences = true
@@ -65,6 +80,7 @@ enableEmoji = true
     noClasses = false
     tabWidth = 4
     style = 'nord'
+
   [markup.goldmark]
     [markup.goldmark.extensions]
       [markup.goldmark.extensions.extras]
@@ -83,6 +99,7 @@ enableEmoji = true
         [markup.goldmark.extensions.passthrough.delimiters]
           block = [['\[', '\]'], ['$$', '$$']]
           inline = [['\(', '\)']]
-  [markup.goldmark.parser]
+
+    [markup.goldmark.parser]
       [markup.goldmark.parser.attribute]
         block = true
