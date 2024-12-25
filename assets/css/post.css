@@ -137,12 +137,13 @@
     margin-top: 0.5rem;
 }
 
-.post-content img {
+/* Exclude images inside figure shortcode */
+.post-content img:not(.figure-container *)  {
     max-width: 100%;
     height: auto;
     margin: var(--content-gap) auto;
     display: block;
-}
+  }
 
 /* Tables */
 /* Table wrapper for scrolling */
@@ -224,19 +225,4 @@
     background: var(--blockquote-bg);
     border-left: 4px solid var(--border-color);
     font-style: italic;
-}
-
-/* Print styles */
-@media print {
-    .post-content {
-        max-width: none;
-    }
-
-    .post-content a {
-        border-bottom: none;
-    }
-
-    .post-content pre {
-        white-space: pre-wrap;
-    }
 }

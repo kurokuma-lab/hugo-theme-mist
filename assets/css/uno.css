@@ -39,7 +39,6 @@
 [right~="\38 "]{right:2rem;}
 [m~="\30 "]{margin:0;}
 [m~="y-6"]{margin-top:1.5rem;margin-bottom:1.5rem;}
-[m~="y-8"]{margin-top:2rem;margin-bottom:2rem;}
 [mx~="auto"]{margin-left:auto;margin-right:auto;}
 .ml-4,
 [ml~="\34 "]{margin-left:1rem;}
@@ -54,7 +53,6 @@
 [box~="border"]{box-sizing:border-box;}
 .inline{display:inline;}
 .block{display:block;}
-[inline-block=""]{display:inline-block;}
 .hidden{display:none;}
 [h~="\32 00px"]{height:200px;}
 [h~="auto"]{height:auto;}
@@ -64,7 +62,6 @@
 [w~="\$maxWidth"]{width:var(--maxWidth);}
 [w~="full"]{width:100%;}
 .flex,
-[flex=""],
 [flex~="\~"]{display:flex;}
 .grow,
 [flex~="grow"]{flex-grow:1;}
@@ -77,12 +74,10 @@
 [items~="end"]{align-items:flex-end;}
 .items-center,
 [flex~="items-center"],
-[items-center=""],
 [items~="center"]{align-items:center;}
 .justify-end{justify-content:flex-end;}
 .justify-center,
 [flex~="justify-center"],
-[justify-center=""],
 [justify~="center"]{justify-content:center;}
 .justify-between,
 [flex~="justify-between"]{justify-content:space-between;}
@@ -116,7 +111,7 @@
 [p~="\34 "]{padding:1rem;}
 [pb~="\34 "]{padding-bottom:1rem;}
 [pt~="\31 "]{padding-top:0.25rem;}
-[text~="center"]{text-align:center;}
+[text-align~="center"]{text-align:center;}
 [text~="\32 xl"]{font-size:1.5rem;line-height:2rem;}
 [text~="\34 xl"]{font-size:2.25rem;line-height:2.5rem;}
 [text~="sm"]{font-size:0.875rem;line-height:1.25rem;}
@@ -149,7 +144,8 @@
 [shadow~="md"]{--un-shadow:var(--un-shadow-inset) 0 4px 6px -1px var(--un-shadow-color, rgb(0 0 0 / 0.1)),var(--un-shadow-inset) 0 2px 4px -2px var(--un-shadow-color, rgb(0 0 0 / 0.1));box-shadow:var(--un-ring-offset-shadow), var(--un-ring-shadow), var(--un-shadow);}
 [shadow~="hover\:lg"]:hover{--un-shadow:var(--un-shadow-inset) 0 10px 15px -3px var(--un-shadow-color, rgb(0 0 0 / 0.1)),var(--un-shadow-inset) 0 4px 6px -4px var(--un-shadow-color, rgb(0 0 0 / 0.1));box-shadow:var(--un-ring-offset-shadow), var(--un-ring-shadow), var(--un-shadow);}
 [transition~="all"]{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}
-[duration~="\33 00"]{transition-duration:300ms;}
+.duration-300,
+[transition~="duration-300"]{transition-duration:300ms;}
 [content~="\$element"]{content:var(--element);}
 [content~="\$index"],
 [content~="\$index\,"]{content:var(--index);}
