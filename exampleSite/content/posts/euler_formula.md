@@ -1,37 +1,62 @@
 +++
-title = "Understanding Euler's Formula"
+title = "Euler's Formula"
 date = 2023-10-10T10:00:00-07:00
 draft = false
-tags = ['math', 'Euler', 'formula']
+tags = ['math', 'Euler', 'markdown', 'mermaid']
 +++
 
-Euler's formula is a fundamental equation in complex analysis that establishes a deep relationship between trigonometric functions and the complex exponential function. It is given by:
+*Euler's formula* is a remarkable equation in mathematics that establishes a deep relationship between complex exponentials and trigonometry. It is expressed as:  
 
-$$
-e^{ix} = \cos(x) + i\sin(x)
-$$
+$$ e^{ix} = \cos(x) + i \sin(x) $$
 
-This formula is remarkable because it connects the exponential function with the trigonometric functions cosine and sine.
+Where:  
+- \( e \) is the base of the natural logarithm  
+- \( i \) is the imaginary unit \( (i^2 = -1) \)  
+- \( x \) is a real number  
 
-## Key Components
+> "Euler's formula is arguably the most beautiful theorem in mathematics."
+> — Richard Feynman
 
-- **\( e \)**: The base of the natural logarithm
-- **\( i \)**: The imaginary unit
-- **\( x \)**: A real number
+Euler's formula is often considered the most elegant equation because it relates five fundamental constants:  
+- **\( e \)** – Euler's number  
+- **\( i \)** – Imaginary unit  
+- **\( \pi \)** – Pi (3.14159...)  
+- **1** – Unity  
+- **0** – Zero  
 
-## Important Values
+## The Magic of \( e^{i\pi} + 1 = 0 \)  
+This special case is known as **Euler's Identity**:  
 
-| \( x \) | \( e^{ix} \) |
-|--------|--------------|
-| \( 0 \) | \( 1 \) |
-| \( \frac{\pi}{2} \) | \( i \) |
-| \( \pi \) | \( -1 \) |
-| \( \frac{3\pi}{2} \) | \( -i \) |
-| \( 2\pi \) | \( 1 \) |
+$$ e^{i\pi} + 1 = 0 $$
+
+### Values of \( e^{ix} \) for Different \( x \)
+
+|\( x \) |	\( e^{ix} \) | \( \cos(x) \) |	\( \sin(x) \) |
+| --- | --- | --- | --- |
+|\( 0 \) |	\( 1 + 0i \)	| 1	 | 0 |
+|\( \pi/2 \) |	\( 0 + i \) |	0	| 1 |
+|\( \pi \) |	\( -1 + 0i \) |	-1	| 0 |
+|\( 3\pi/2 \) |	\( 0 - i \)	| 0 | -1 |
+|\( 2\pi \) |	\( 1 + 0i \) |	1 |	0 |
+
+Euler’s formula can be derived by expanding \( e^{ix} \) as a Taylor series:
+
+$$ e^{ix} = 1 + ix + \frac{(ix)^2}{2!} + \frac{(ix)^3}{3!} + \dots $$
+
+Expanding:
+
+$$ e^{ix} = 1 + ix - \frac{x^2}{2!} - i\frac{x^3}{3!} + \dots $$
+
+Grouping real and imaginary parts:
+
+$$ e^{ix} = \left( 1 - \frac{x^2}{2!} + \dots \right) + i \left( x - \frac{x^3}{3!} + \dots \right) $$
+
+Which simplifies to:
+$$ e^{ix} = \cos(x) + i \sin(x) $$
 
 ## Visualizing Euler's Formula
 
-To better understand Euler's formula, we can visualize it using Python. Below is a Python code snippet that plots Euler's formula on the complex plane.
+To better understand Euler's formula, we can visualize it using ``Python``. Below is a ``Python`` code snippet that plots Euler's formula on the complex plane.
 
 ```python
 import numpy as np
@@ -62,46 +87,34 @@ This code generates a plot of Euler's formula on the complex plane, showing how 
 
 Euler's formula has numerous applications in mathematics and engineering, including:
 - **Signal processing**: Representing sinusoidal signals as complex exponentials.
-- **Quantum mechanics**: Describing wave functions.
 - **Electrical engineering**: Analyzing AC circuits.
 
 Understanding Euler's formula provides a powerful tool for working with complex numbers and their applications in various fields.
 
 ## Historical Context
 
-> "Euler's formula is arguably the most beautiful theorem in mathematics."
-> — Richard Feynman
 
 ## Euler's Formula Flowchart
 
-Here is a flowchart to illustrate the steps involved in understanding and applying Euler's formula:
+Here is a flowchart to illustrate the steps involved in understanding ***Euler's Identity***:
 
 ```mermaid
-graph TD
-    A[Start] --> B[Understand the components of Euler's formula]
-    B --> C[Visualize Euler's formula using Python]
-    C --> D[Explore applications in various fields]
-    D --> E[Gain a deeper appreciation of its significance]
-    E --> F[End]
+flowchart TD
+    A[Euler's Formula] --> B[Special Case: x = π]
+    B --> C[Euler's Identity]
 ```
 
 ## Conclusion
 
 Euler's formula is a beautiful and profound equation that reveals the deep connections between exponential and trigonometric functions. By visualizing it, we can gain a better appreciation of its significance and applications.
 
-## Text Formatting Examples
+--- 
 
-Regular text can be formatted as **bold**, *italic*, or ***bold italic***. You can also use ~~strikethrough~~ for deleted text.
-
----
-
-## List Examples
-
-Here are some key mathematical constants:
-* π (pi): approximately 3.14159
+### Here are some key mathematical constants:
+* \(\pi\): approximately 3.14159
   * Used in geometry and trigonometry
   * Appears in Euler's formula
-* e (Euler's number): approximately 2.71828
+* \(e\) (Euler's number): approximately 2.71828
   * Base of natural logarithms
   * Also appears in Euler's formula
 
