@@ -1,8 +1,47 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+  <div class="content" p="sm:4 md:6 lg:8">
+    <div class="list_with_title" space-y="12">
+      {{ $pages := .Pages }} 
+      {{ $paginator := .Paginate $pages }}
+      
+      <div class="listing_title">
+        <h2 text="2xl gray-900" 
+            font="serif medium" 
+            leading="snug">
+          {{ if not (eq .Kind "term")}}
+            {{ i18n "posts" }}
+          {{ else }}
+            {{ .Title }}
+          {{ end }}
+        </h2>
+      </div>
+
+      {{ range $paginator.Pages.GroupByDate "2006" }}
+        <div class="listing_title" 
+             text="xl gray-800"
+             font="serif medium">
+          {{ .Key }}
+        </div>
+        <div class="listing"space-y="4">
+          {{ range .Pages }}
+            <div class="listing_item" 
+                 border="b gray-200">
+              <div flex="~ items-center" gap="2">
+                <span text="xs gray-500" font="mono">
+                    {{ .Date.Format "01-02" }}
+                  </span>                
+                <a href="{{ .RelPermalink }}"
+                   text="gray-900 hover:gray-600"
+                   decoration="none">
+                  {{ .Title }}
+                </a>
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+    
+    {{ partial "pagination.html" . }}
+  </div>
 {{ end }}

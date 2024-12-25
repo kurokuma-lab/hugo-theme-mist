@@ -1,0 +1,13 @@
+<div class="highlight_container" 
+     text="gray-800"
+     leading="relaxed"
+     font="mono"
+     rounded="lg"
+     overflow="hidden"
+     shadow="sm"
+     p="0">
+    <pre class="code_content" m="0" overflow-x="auto">
+        {{ $result := transform.HighlightCodeBlock . }}
+        {{ $result.Wrapped }}
+    </pre>
+</div>

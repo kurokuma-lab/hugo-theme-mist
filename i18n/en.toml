@@ -1,0 +1,14 @@
+[posts]
+other = "Posts"
+
+[tags]
+other = "Tags"
+
+[prev_page]
+other = "Previous"
+
+[next_page]
+other = "Next"
+
+[read_more]
+other = "Read more"

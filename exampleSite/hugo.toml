@@ -1,3 +1,88 @@
 baseURL = 'http://localhost:1313/'
-languageCode = 'en-us'
-title = 'Mist'
+languageCode = "zh"
+defaultContentLanguage = "zh-tw"
+theme = 'mist'
+title = "雲淡風輕"                        # site title                     # 网站标题
+hasCJKLanguage = true                  # has chinese/japanese/korean ?  # 自动检测是否包含 中文\日文\韩文
+enableEmoji = true
+
+
+# The main menu configuration for the website.
+# Each menu item is defined as a TOML table with the following fields:
+#   name: The display name of the menu item.
+#   weight: The order in which the menu items are displayed, with lower numbers appearing first.
+#   pageRef: The path to the page that the menu item links to.
+[[menu.main]]                          # config your menu               # 配置菜单
+  name = "首頁"
+  weight = 10
+  pageRef = "/"
+[[menu.main]]
+  name = "文章"
+  weight = 20
+  pageRef = "/posts/"
+[[menu.main]]
+  name = "標籤"
+  weight = 30
+  pageRef = "/tags/"
+[[menu.main]]
+  name = "關於"
+  weight = 40
+  pageRef = "/about/"
+[pagination]
+  pagerSize = 4
+[params]
+  enableAnimation = true  # enable animation             # 是否使用动画
+  subTitle = "Mist"                                       # site's subTitle              # 网站二级标题
+  enableSummary = true                                                 # display the article summary  # 是否显示文章摘要
+  summaryLength = 180  # Optional, defaults to 180 if not specified
+  footerSlogan = "Eat, Play, Sleep"                                   # site's footer slogan         # 网站页脚标语
+  keywords = ["Hugo","theme","mist"]                                   # site's keywords              # 网站关键字
+  description = "Hugo theme Mist example site."                        # site's description           # 网站描述
+  mainSections = ["posts","post"] 
+[params.author]
+  name = "Kurokuma-lab"
+# Your socail's url
+# 社交地址配置
+[params.social]
+  bilibili = "https://space.bilibili.com/fake-2543"
+  discord = "https://discord.gg/fake-2543"
+  facebook = "https://www.facebook.com/profile.php?id=fake-3533"
+  github = "https://github.com/fake-user-2131"
+  instagram = "https://www.instagram.com/fake_profile_5242/"
+  telegram = "https://t.me/fake_channel_2543"
+  tiktok = "https://www.tiktok.com/@fake_tiktok_2543"
+  twitter-x = "https://twitter.com/fake_user_2452"
+  weibo = "https://weibo.com/u/fake-3564"
+  youtube = "https://www.youtube.com/channel/fake-2532"
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+    tabWidth = 4
+    style = 'nord'
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.extras]
+        [markup.goldmark.extensions.extras.delete]
+          enable = true
+        [markup.goldmark.extensions.extras.insert]
+          enable = true
+        [markup.goldmark.extensions.extras.mark]
+          enable = true
+        [markup.goldmark.extensions.extras.subscript]
+          enable = true
+        [markup.goldmark.extensions.extras.superscript]
+          enable = true
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+  [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true

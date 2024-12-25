@@ -1,0 +1,54 @@
+{{ $image := .Page.Resources.GetMatch (.Get "src") }}
+{{ $alt := "" }}
+{{ if isset .Params "alt" }}
+{{ $alt = .Get "alt" }}
+{{ end }}
+{{ $caption := "" }}
+{{ if isset .Params "caption" }}
+{{ $caption = .Get "caption" }}
+{{ end }}
+{{ $maxWidth := "" }}
+{{ if isset .Params "max_width" }}
+{{ $maxWidth = .Get "max_width" }}
+{{ else}}
+{{ $maxWidth = (string $image.Width) }}
+{{ end }}
+
+<div class="figure-container" flex justify-center items-center>
+  <figure class="image-container" m="y-8" overflow="hidden" rounded="md" shadow="md hover:lg" display="block" p="4"
+    transition="all" duration="300" align="center" inline-block>
+    <picture>
+      {{ with $image }}
+      {{ $maxSize := printf "%sx" $maxWidth }}
+      {{ $target := .Resize $maxSize }}
+      {{ if gt $maxWidth 1024 }}
+      {{ $tiny := .Resize "480x" }}
+      {{ $small := .Resize "768x" }}
+      {{ $medium := .Resize "1024x" }}
+      <source srcset="{{ $target.RelPermalink }}" media="(min-width: 1024px)">
+      <source srcset="{{ $medium.RelPermalink }}" media="(min-width: 768px)">
+      <source srcset="{{ $small.RelPermalink }}" media="(min-width: 480px)">
+      <source srcset="{{ $tiny.RelPermalink }}" media="(min-width: 0px)">
+      {{ else if gt $maxWidth 768 }}
+      {{ $tiny := .Resize "480x" }}
+      {{ $small := .Resize "768x" }}
+      <source srcset="{{ $target.RelPermalink }}" media="(min-width: 768px)">
+      <source srcset="{{ $small.RelPermalink }}" media="(min-width: 480px)">
+      <source srcset="{{ $tiny.RelPermalink }}" media="(min-width: 0px)">
+      {{ else if gt $maxWidth 480 }}
+      {{ $tiny := .Resize "480x" }}
+      <source srcset="{{ $target.RelPermalink }}" media="(min-width: 480px)">
+      <source srcset="{{ $tiny.RelPermalink }}" media="(min-width: 0px)">
+      {{ else }}
+      <source srcset="{{ $target.RelPermalink }}" media="(min-width: 0px)">
+      {{ end }}
+      <img src="{{ $target.RelPermalink }}" alt="{{ $alt }}" loading="lazy" w="{{ $maxWidth }}" h="auto" duration="300">
+      {{ end }}
+    </picture>
+    {{ with $caption }}
+    <figcaption text="sm center gray-600">
+      {{ . }} {{ $image.Width}}
+    </figcaption>
+    {{ end }}
+  </figure>
+</div>
