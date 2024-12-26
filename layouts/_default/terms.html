@@ -1,18 +1,18 @@
-{{ define "main" }}
+{{- define "main" }}
   <div class="content" p="sm:4 md:6 lg:8">
     <div class="page_tags" space-y="12">
       <h2 text="2xl gray-900" 
           font="serif medium" 
           leading="snug">
-        {{ i18n "tags" }}
+        {{- i18n "tags" }}
       </h2>
 
       <div class="tags_list" 
            flex="~ wrap" 
            gap="4">
-        {{ $data := .Data }}
-        {{ range $key, $value := .Data.Terms.ByCount }}
-          {{ if ($value.Name) }}
+        {{- $data := .Data }}
+        {{- range $key, $value := .Data.Terms.ByCount }}
+          {{- if ($value.Name) }}
             <a href="{{ $data.Plural | absURL }}/{{ $value.Name | urlize }}"
                text="gray-900 hover:gray-600"
                decoration="none"
@@ -21,15 +21,15 @@
                p="2 4"
                flex="~ items-center"
                gap="2">
-              {{ $value.Name }}
+              {{- $value.Name }}
               <span text="xs gray-500" 
                     font="mono">
-                {{ $value.Count }}
+                {{- $value.Count }}
               </span>
             </a>
-          {{ end }}
-        {{ end }}
+          {{- end }}
+        {{- end }}
       </div>
     </div>
   </div>
-{{ end }}
+{{- end }}

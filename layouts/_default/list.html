@@ -1,18 +1,19 @@
-{{ define "main" }}
+{{- define "main" }}
   <div class="content" p="sm:4 md:6 lg:8">
     <div class="list_with_title" space-y="12">
-      {{ $pages := .Pages }} 
-      {{ $paginator := .Paginate $pages }}
+      {{- $pagersize := .Site.Params.Pagination.archivePagerSize | default 360 }}
+      {{- $pages := .Pages }} 
+      {{- $paginator := .Paginate $pages $pagersize }}
       
       <div class="listing_title">
         <h2 text="2xl gray-900" 
             font="serif medium" 
             leading="snug">
-          {{ if not (eq .Kind "term")}}
-            {{ i18n "posts" }}
-          {{ else }}
-            {{ .Title }}
-          {{ end }}
+          {{- if not (eq .Kind "term")}}
+            {{- i18n "posts" }}
+          {{- else }}
+            {{- .Title }}
+          {{- end }}
         </h2>
       </div>
 
@@ -20,28 +21,28 @@
         <div class="listing_title" 
              text="xl gray-800"
              font="serif medium">
-          {{ .Key }}
+          {{- .Key }}
         </div>
         <div class="listing"space-y="4">
-          {{ range .Pages }}
+          {{- range .Pages }}
             <div class="listing_item" 
                  border="b gray-200">
               <div flex="~ items-center" gap="2">
                 <span text="xs gray-500" font="mono">
-                    {{ .Date.Format "01-02" }}
+                    {{- .Date.Format "01-02" }}
                   </span>                
                 <a href="{{ .RelPermalink }}"
                    text="gray-900 hover:gray-600"
                    decoration="none">
-                  {{ .Title }}
+                  {{- .Title }}
                 </a>
               </div>
             </div>
-          {{ end }}
+          {{- end }}
         </div>
-      {{ end }}
+      {{- end }}
     </div>
     
-    {{ partial "pagination.html" . }}
+    {{- partial "pagination.html" . }}
   </div>
-{{ end }}
+{{- end }}
