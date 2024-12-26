@@ -24,10 +24,7 @@
 {{- end }}
 
 {{- /* Math CSS */}}
-{{- with resources.Get "css/katex.min.css" }}
-  {{- template "cssLink" . }}
-{{- end }}
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.17/dist/katex.min.css" integrity="sha384-E3Ch6GfEmQxX4+zL1TNBHZTahPudFnkb3bn736MpiTymT+kdWvkqbcXC9w+7NUFC" crossorigin="anonymous">
 {{- /* Animation CSS */}}
 {{ if .Site.Params.enableAnimation }}
   {{- with resources.Get "css/animate.min.css" }}
