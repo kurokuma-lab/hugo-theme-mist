@@ -4,5 +4,5 @@ draft = false
 title = 'About'
 +++
 
-這個主題的誕生源於我想為我的博客開發一個專屬的主題。作為一名開發者，我希望能夠創建一個既美觀又實用的博客主題，能夠滿足我個人的需求，同時也能夠分享給其他有相同需求的人。
+*Mist* is a Hugo theme that I built while planning to create my personal blog. I have always been a fan of minimalist theme [astro-theme-typography](https://github.com/moeyua/astro-theme-typography), and I wanted to customize some existing Hugo themes to fit my taste. As I made more and more changes, the theme evolved significantly and became quite different from the original themes I started with. This journey led to the creation of *Mist*, a simple and elegant theme designed to provide a clean and modern blogging experience.
 
