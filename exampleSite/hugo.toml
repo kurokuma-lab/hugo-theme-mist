@@ -1,13 +1,13 @@
 #-----------------------------------------------------------------------------
 # Site Configuration
 #-----------------------------------------------------------------------------
-baseURL = 'http://localhost:1313/'
-languageCode = "zh"
-defaultContentLanguage = "zh-tw"    # Default content language, corresponds to translation files in the i18n folder. Users can add new translation files to support additional languages.
-theme = 'mist'
-title = "雲淡風輕"                    # Site title
-hasCJKLanguage = true               # Enable Chinese/Japanese/Korean language support
-enableEmoji = true
+baseURL = 'http://localhost:1313/'             # Site URL
+languageCode = "zh"                            # Site language code
+defaultContentLanguage = "zh-tw"               # Default content language, corresponds to translation files in the i18n folder. Users can add new translation files to support additional languages.
+theme = 'mist'                                 # Site theme
+title = "雲淡風輕"                              # Site title
+hasCJKLanguage = true                          # Enable Chinese/Japanese/Korean language support
+enableEmoji = true                             # Enable emoji support
 
 #-----------------------------------------------------------------------------
 # Main Navigation Menu
@@ -33,14 +33,14 @@ enableEmoji = true
 # Site Parameters
 #-----------------------------------------------------------------------------
 [params]
-  enableAnimation = true           # Enable site animations
-  subTitle = 'Mist'                # Site subtitle
-  enableSummary = true             # Display article summaries
-  summaryLength = 180              # Length of article summaries
-  footerSlogan = '天有時 地有時'     # Site slogan in footer
+  enableAnimation = true                       # Enable site animations
+  subTitle = 'Mist'                            # Site subtitle
+  enableSummary = true                         # Display article summaries
+  summaryLength = 180                          # Length of article summaries
+  footerSlogan = '迷糊之間'                        # Site slogan in footer
   keywords = ['Hugo', 'theme', 'mist', '雲淡風輕'] # Site keywords
   description = "Hugo theme Mist example site" # Site description
-  mainSections = ["posts", "post"] # Sections to include in main page
+  mainSections = ["posts", "post"]             # Sections to include in main page
 
 [params.author]
   name = "Kurokuma-lab"
@@ -63,8 +63,9 @@ enableEmoji = true
 #-----------------------------------------------------------------------------
 # Pagination Settings
 #-----------------------------------------------------------------------------
-[pagination]
-  pagerSize = 4
+[params.pagination]
+  homePagerSize = 4                            # Number of posts to display on home page
+  archivePagerSize = 180                       # Number of posts to display on archive page
 
 #-----------------------------------------------------------------------------
 # Markup Configuration
