@@ -1,6 +1,6 @@
 {
   "name": "hugo-theme-mist",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "description": "Simple Hugo theme that influenced by the astro_theme_typography",
   "type": "module",
   "scripts": {
