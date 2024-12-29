@@ -24,6 +24,12 @@ jobs:
     env:
       HUGO_VERSION: 0.140.0
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -32,17 +38,20 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '22'
+          node-version: '16'
 
       - name: Install dependencies
         run: npm install
+
+      - name: Build UnoCSS
+        run: npm run unocss:build
 
       - name: Build Site
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
           TZ: America/Los_Angeles
-        run: npm run build
+        run: hugo --source exampleSite --themesDir=../.. --minify --gc
      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
