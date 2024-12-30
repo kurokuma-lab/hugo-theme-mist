@@ -1,23 +1,107 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-US'
-title = 'My New Hugo Site'
+#-----------------------------------------------------------------------------
+# Site Configuration
+#-----------------------------------------------------------------------------
+baseURL = '/'                                  # Site URL
+relativeURLs = true                            # Enable relative URLs
+languageCode = "zh"                            # Site language code
+defaultContentLanguage = "zh-tw"               # Default content language, corresponds to translation files in the i18n folder. Users can add new translation files to support additional languages.
+theme = 'mist'                                 # Site theme
+title = "雲淡風輕"                              # Site title
+hasCJKLanguage = true                          # Enable Chinese/Japanese/Korean language support
+enableEmoji = true                             # Enable emoji support
 
-[[menus.main]]
-name = 'Home'
-pageRef = '/'
-weight = 10
+#-----------------------------------------------------------------------------
+# Main Navigation Menu
+#-----------------------------------------------------------------------------
+[[menu.main]]
+  identifier = "home"
+  weight = 10
+  pageRef = "/"
+[[menu.main]]
+  identifier = "posts"
+  weight = 20
+  pageRef = "/posts/"
+[[menu.main]]
+  identifier = "tags"
+  weight = 30
+  pageRef = "/tags/"
+[[menu.main]]
+  identifier = "about"
+  weight = 40
+  pageRef = "/about/"
 
-[[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
-weight = 20
+#-----------------------------------------------------------------------------
+# Site Parameters
+#-----------------------------------------------------------------------------
+[params]
+  enableAnimation = true                       # Enable site animations
+  subTitle = 'Mist'                            # Site subtitle
+  enableSummary = true                         # Display article summaries
+  summaryLength = 180                          # Length of article summaries
+  footerSlogan = '迷糊之間'                        # Site slogan in footer
+  keywords = ['Hugo', 'theme', 'mist', '雲淡風輕'] # Site keywords
+  description = "Hugo theme Mist example site" # Site description
+  mainSections = ["posts", "post"]             # Sections to include in main page
 
-[[menus.main]]
-name = 'Tags'
-pageRef = '/tags'
-weight = 30
+[params.author]
+  name = "Kurokuma-lab"
 
-[module]
-  [module.hugoVersion]
-    extended = false
-    min = "0.116.0"
+#-----------------------------------------------------------------------------
+# Social Media Links (delete unused ones)
+#-----------------------------------------------------------------------------
+[params.social]
+  bilibili = "https://space.bilibili.com/fake-2543"
+  discord = "https://discord.gg/fake-2543"
+  facebook = "https://www.facebook.com/profile.php?id=fake-3533"
+  github = "https://github.com/fake-user-2131"
+  instagram = "https://www.instagram.com/fake_profile_5242/"
+  telegram = "https://t.me/fake_channel_2543"
+  tiktok = "https://www.tiktok.com/@fake_tiktok_2543"
+  twitter-x = "https://twitter.com/fake_user_2452"
+  weibo = "https://weibo.com/u/fake-3564"
+  youtube = "https://www.youtube.com/channel/fake-2532"
+
+#-----------------------------------------------------------------------------
+# Pagination Settings
+#-----------------------------------------------------------------------------
+[params.pagination]
+  homePagerSize = 4                            # Number of posts to display on home page
+  archivePagerSize = 180                       # Number of posts to display on archive page
+
+#-----------------------------------------------------------------------------
+# Markup Configuration
+#-----------------------------------------------------------------------------
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+    tabWidth = 4
+    style = 'nord'
+
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.extras]
+        [markup.goldmark.extensions.extras.delete]
+          enable = true
+        [markup.goldmark.extensions.extras.insert]
+          enable = true
+        [markup.goldmark.extensions.extras.mark]
+          enable = true
+        [markup.goldmark.extensions.extras.subscript]
+          enable = true
+        [markup.goldmark.extensions.extras.superscript]
+          enable = true
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true

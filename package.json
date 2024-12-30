@@ -1,6 +1,6 @@
 {
   "name": "hugo-theme-mist",
-  "version": "1.0.0",
+  "version": "0.9.4",
   "description": "Simple Hugo theme that influenced by the astro_theme_typography",
   "type": "module",
   "scripts": {
@@ -8,7 +8,7 @@
     "unocss:watch": "unocss 'layouts/**/*.html' -o assets/css/uno.css --watch",
     "unocss:build": "unocss 'layouts/**/*.html' -o assets/css/uno.css",
     "dev": "npm run unocss:watch & hugo server --source exampleSite --themesDir=../.. --watch --buildDrafts --disableFastRender",
-    "build": "npm run unocss:build && hugo --source exampleSite --themesDir=../.. --minify"
+    "build": "npm run unocss:build && hugo --source exampleSite --themesDir=../.. --minify --gc"
   },
   "author": "kurokuma",
   "license": "MIT",

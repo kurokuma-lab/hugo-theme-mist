@@ -1,4 +1,21 @@
-# Mist Theme
+# Mist Theme for Hugo
+
+![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/kurokuma-lab/hugo-theme-mist/main)
+![License](https://img.shields.io/github/license/kurokuma-lab/hugo-theme-mist)
+<a href="https://www.buymeacoffee.com/kurokuma" target="_blank"><img src="https://img.shields.io/badge/-buy_me_a%C2%A0coffee-gray?logo=buy-me-a-coffee" alt="Buy Me A Coffee"></a>
+
+![Hugo](https://img.shields.io/badge/Hugo-grey.svg?style=for-the-badge&logo=Hugo)
+![Hugo Theme](https://img.shields.io/badge/Hugo%20Theme-grey?style=for-the-badge&logo=hugothemes&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-grey?style=for-the-badge&logo=node.js&logoColor=white)
+![Npm](https://img.shields.io/badge/NPM-grey?style=for-the-badge&logo=npm&logoColor=white)
+![UnoCSS](https://img.shields.io/badge/UnoCSS-grey?style=for-the-badge&logo=unocss&logoColor=white)
+
+![Markdown](https://img.shields.io/badge/Markdown-grey?style=for-the-badge&logo=markdown&logoColor=white)
+![LaTeX](https://img.shields.io/badge/LaTeX-grey?style=for-the-badge&logo=latex&logoColor=white)
+![Mermaid](https://img.shields.io/badge/Mermaid-grey?style=for-the-badge&logo=mermaid&logoColor=white)
+
+
+
 
 ## Overview
 
