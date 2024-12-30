@@ -1,7 +1,8 @@
 #-----------------------------------------------------------------------------
 # Site Configuration
 #-----------------------------------------------------------------------------
-baseURL = '/'             # Site URL
+baseURL = '/'                                  # Site URL
+relativeURLs = true                            # Enable relative URLs
 languageCode = "zh"                            # Site language code
 defaultContentLanguage = "zh-tw"               # Default content language, corresponds to translation files in the i18n folder. Users can add new translation files to support additional languages.
 theme = 'mist'                                 # Site theme
