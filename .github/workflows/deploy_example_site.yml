@@ -50,7 +50,7 @@ jobs:
         run: npm run unocss:build
 
       - name: Build Site
-          working-directory: mist
+        working-directory: mist
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
