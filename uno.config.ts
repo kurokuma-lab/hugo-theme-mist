@@ -2,34 +2,58 @@ import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
 
 
 const themes = {
-  default: {
-    breakpoints: {
-      'sm': '768px',
-      'md': '1024px',
-      'lg': '1280px',
-    },
-  }
+    default: {
+        breakpoints: {
+            'sm': '768px',
+            'md': '1024px',
+            'lg': '1280px',
+        },
+        fontFamily: {
+            serif: ['Linux Libertine', 'Times New Roman', 'serif'],
+            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+            mono: ['SF Mono', 'SFMono-Regular', 'Consolas', 'monospace'],
+        },
+        colors: {
+            primary: '#1a1a1a',
+            secondary: '#4a4a4a',
+            border: '#e5e7eb',
+            hover: '#f8f9fa',
+            link: '#2563eb',
+            'link-hover': '#1d4ed8',
+            'table-bg': '#ffffff',
+            'table-header': '#f8f9fa',
+            'table-border': '#e5e7eb',
+            'table-hover': '#f3f4f6',
+            'hr': '#e5e7eb',
+            'blockquote': '#f9fafb'
+        },
+        spacing: {
+            content: '1.5rem',
+            paragraph: '0.75rem',
+            section: '3rem'
+        }
+    }
 };
 
 const selectedTheme = themes['default'];
 
 export default defineConfig({
-  presets: [
-    presetUno(),
-    presetAttributify(),
-    presetIcons({
-      extraProperties: {
-        'display': 'inline-block',
-        'vertical-align': 'middle',
-      }
-    })
-  ],
-  theme: {
-    extends: selectedTheme
-  },
-  preflights: [
-    {
-      getCSS: () => `
+    presets: [
+        presetUno(),
+        presetAttributify(),
+        presetIcons({
+            extraProperties: {
+                'display': 'inline-block',
+                'vertical-align': 'middle',
+            }
+        })
+    ],
+    theme: {
+        extends: selectedTheme
+    },
+    preflights: [
+        {
+            getCSS: (theme) => `
         :root {
           /* Typography */
           --serif-font: "Linux Libertine", "Times New Roman", serif;
@@ -249,7 +273,6 @@ export default defineConfig({
           border-left: 4px solid var(--border-color);
           font-style: italic;
       }
-      `
-    }
-  ]
+    `}
+    ]
 });
