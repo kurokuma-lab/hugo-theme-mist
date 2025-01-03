@@ -28,15 +28,16 @@
             --text-primary: #1a1a1a;
             --text-secondary: #4a4a4a;
             --border-color: #e5e7eb;
-            --hover-color: #f1f5f9;
-            --link-color: #e5e7eb;
+            --list-border: #94a3b8;
+            --hover-color: #f8fafc;
+            --link-color: #94a3b8;
             --link-hover: #1a1a1a;
             --table-bg: #ffffff;
-            --table-header-bg: #f1f5f9;
+            --table-header-bg: #f8fafc;
             --table-border: #e5e7eb;
             --table-hover: #f3f4f6;
             --hr-color: #e5e7eb;
-            --blockquote-bg: #f9fafb;
+            --blockquote-bg: #f8fafc;
         }
 
         .post-content {
@@ -143,7 +144,7 @@
             position: absolute;
             left: -1.25rem;
             font-size: 1rem;
-            color: var(--border-color);
+            color: var(--list-border);
             transition: all 0.2s ease;
         }
 

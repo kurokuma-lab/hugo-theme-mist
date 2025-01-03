@@ -27,15 +27,16 @@ const themes = {
             primary: '#1a1a1a',
             secondary: '#4a4a4a',
             border: '#e5e7eb',
-            hover: '#f1f5f9',
-            link: '#e5e7eb',
+            hover: '#f8fafc',
+            'list-border': '#94a3b8',
+            link: '#94a3b8',
             'link-hover': '#1a1a1a',
             'table-bg': '#ffffff',
-            'table-header': '#f1f5f9',
+            'table-header': '#f8fafc',
             'table-border': '#e5e7eb',
             'table-hover': '#f3f4f6',
             'hr': '#e5e7eb',
-            'blockquote': '#f9fafb'
+            'blockquote': '#f8fafc'
         },
         spacing: {
             content: '1.5rem',
@@ -92,6 +93,7 @@ export default defineConfig({
             --text-primary: ${t.theme.extends.colors.primary};
             --text-secondary: ${t.theme.extends.colors.secondary};
             --border-color: ${t.theme.extends.colors.border};
+            --list-border: ${t.theme.extends.colors['list-border']};
             --hover-color: ${t.theme.extends.colors.hover};
             --link-color: ${t.theme.extends.colors.link};
             --link-hover: ${t.theme.extends.colors['link-hover']};
@@ -207,7 +209,7 @@ export default defineConfig({
             position: absolute;
             left: -1.25rem;
             font-size: 1rem;
-            color: var(--border-color);
+            color: var(--list-border);
             transition: all 0.2s ease;
         }
 
