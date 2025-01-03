@@ -137,20 +137,19 @@
             position: relative;
         }
 
+        /* Dash marker for all ul list items */
         .post-content ul li::before {
-            content: "";
+            content: "-";
             position: absolute;
             left: -1.25rem;
-            top: 0.6rem;
-            width: 0.35rem;
-            height: 0.35rem;
-            background-color: #64748b;
-            border-radius: 50%;
+            font-size: 1rem;
+            color: var(--border-color);
             transition: all 0.2s ease;
         }
 
+        /* Hover effect for dash marker */
         .post-content ul li:hover::before {
-            background-color: #475569;
+            color: var(--primary-color);
         }
 
         .post-content ol {
