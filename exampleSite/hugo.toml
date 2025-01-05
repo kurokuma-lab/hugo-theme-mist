@@ -81,7 +81,7 @@ enableEmoji = true                             # Enable emoji support
     lineNumbersInTable = true
     noClasses = false
     tabWidth = 4
-    style = 'nord'
+    style = 'friendly'
 
   [markup.goldmark]
     [markup.goldmark.extensions]
