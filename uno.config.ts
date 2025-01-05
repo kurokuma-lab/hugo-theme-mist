@@ -308,17 +308,22 @@ export default defineConfig({
         /* Math and Code */
         .post-content code:not(.highlight *) {
             font-family: var(--mono-font);
-            font-size: 0.9em;
+            font-size: 0.8em;
             background: var(--hover-color);
             padding: 0.2em 0.4em;
-            border-radius: 3px;
+            border-radius: 0.4em;
+            border: 1px solid var(--border-color);
+            display: inline-block;
         }
 
         .post-content pre:not(.highlight *) {
+            font-family: var(--mono-font);
             background: var(--hover-color);
             padding: 1rem;
             border-radius: 4px;
             overflow-x: auto;
+            border: 1px solid var(--border-color);
+            display: inline-block;
         }
 
         /* Horizontal rule - refined */
