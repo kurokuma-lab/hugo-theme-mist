@@ -9,8 +9,8 @@ const themes = {
             'lg': '1280px',
         },
         fontFamily: {
-            serif: ['Linux Libertine', 'Times New Roman', 'serif'],
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+            serif: ['Source Han Serif SC', 'Linux Libertine', 'Times New Roman', 'serif'],
+            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Microsoft JhengHei', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
             mono: ['SF Mono', 'SFMono-Regular', 'Consolas', 'monospace'],
         },
         fontSize: {
