@@ -360,6 +360,8 @@
 [flex~="wrap"]{flex-wrap:wrap;}
 .list-none{list-style-type:none;}
 [content~="end"]{align-content:flex-end;}
+.items-start,
+[flex~="items-start"]{align-items:flex-start;}
 [items~="end"]{align-items:flex-end;}
 .items-center,
 [flex~="items-center"],
