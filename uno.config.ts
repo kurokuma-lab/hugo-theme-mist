@@ -9,7 +9,7 @@ const themes = {
             'lg': '1280px',
         },
         fontFamily: {
-            serif: ['Source Han Serif SC', 'Linux Libertine', 'Times New Roman', 'serif'],
+            serif: ['Source Han Serif SC', 'Linux Libertine', 'STSong', 'Times New Roman', 'serif'],
             sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Microsoft JhengHei', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
             mono: ['SF Mono', 'SFMono-Regular', 'Consolas', 'monospace'],
         },
@@ -112,7 +112,7 @@ export default defineConfig({
             width: 100%;
             max-width: 100%;
             overflow-x: hidden;
-            padding: 0 1rem;
+            padding: 0 0.5rem;
             box-sizing: border-box;
         }
 
