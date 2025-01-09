@@ -21,7 +21,7 @@
         {{- .Date.Format "2006.01.02" }}
       </time>
       {{- with .Params.tags }}
-      <div flex="~ gap-2 items-center" ml="4">
+      <div flex="~ wrap gap-2 items-center" ml="4">
         {{ range . }}
         <a href="{{ "tags" | absURL }}/{{ . | urlize }}/"
            text="sm gray-500 hover:gray-700"
