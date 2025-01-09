@@ -1,13 +1,13 @@
-<header class="header" h="200px" w="full" box="border" flex="~ col gap-2.5" items="end" justify="center">
-  <div class="site_title_container" lg:write-vertical-left>
-    <h1 class="site_title" mr="3">
-      <a href="{{ .Site.Home.Permalink }}" text="4xl gray-900 bottom" font="serif medium" tracking="wider" decoration="none"
+<header class="header"  pt="4" pb="4" w="full">
+  <div class="site_title_container" w="full" lg:write-vertical-left flex="~ col"  items="start" justify="end">
+    <h1 class="site_title"  mr="lg:0" mb="1 lg:auto" >
+      <a href="{{ .Site.Home.Permalink }}" text="4xl gray-900" font="serif medium" tracking="wider" decoration="none"
         display="block">
         {{ .Site.Title }}
       </a>
     </h1>
     {{ with .Site.Params.subtitle }}
-    <span text="xl gray-500 bottom" font="serif medium" tracking="wide" pt="1">
+    <span text="xl gray-500" font="serif medium" tracking="wide" pt="lg:1">
       {{ . }}
     </span>
     {{ end }}

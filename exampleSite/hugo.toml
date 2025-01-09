@@ -6,7 +6,7 @@ relativeURLs = true                            # Enable relative URLs
 languageCode = "zh"                            # Site language code
 defaultContentLanguage = "zh-tw"               # Default content language, corresponds to translation files in the i18n folder. Users can add new translation files to support additional languages.
 theme = 'mist'                                 # Site theme
-title = "雲淡風輕"                              # Site title
+title = "The Idoit Site"                              # Site title
 hasCJKLanguage = true                          # Enable Chinese/Japanese/Korean language support
 enableEmoji = true                             # Enable emoji support
 
