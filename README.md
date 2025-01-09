@@ -15,11 +15,11 @@
 ![Mermaid](https://img.shields.io/badge/Mermaid-grey?style=for-the-badge&logo=mermaid&logoColor=white)
 
 
-
-
 ## Overview
 
 *Mist* is a Hugo theme that I built while planning to create my personal blog. I have always been a fan of minimalist theme ``astro-theme-typography``, and I wanted to customize some existing Hugo themes to fit my taste. As I made more and more changes, the theme evolved significantly and became quite different from the original themes I started with. This journey led to the creation of *Mist*, a simple and elegant theme designed to provide a clean and modern blogging experience.
+
+[Demo Site](https://kurokuma-lab.github.io/hugo-theme-mist/)
 
 ## Features
 

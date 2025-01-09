@@ -32,14 +32,14 @@
         </p>
       </div>
       {{- end }}
-      <div class="post_meta" mt="4" flex="~ items-center justify-between" text="sm gray-500">
+      <div class="post_meta" mt="4" flex="~ items-start justify-between" text="sm gray-500">
         <div flex="~ items-center gap-2">
           <time datetime="{{ .Date.Format " 2006-01-02" }}" font="mono">
             {{- .Date.Format "2006.01.02" }}
           </time>
           {{- with .Params.tags }}
           <i class="i-ri:price-tag-3-line" ml="2" text="gray-400"></i>
-          <div flex="~ gap-2">
+          <div flex="~ gap-2 wrap">
             {{- range . }}
             <a href="{{ " tags" | absURL }}/{{ . | urlize }}/" text="sm gray-500 hover:gray-700" decoration="none">
               #{{- . }}
