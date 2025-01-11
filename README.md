@@ -19,7 +19,10 @@
 
 *Mist* is a Hugo theme that I built while planning to create my personal blog. I have always been a fan of minimalist theme ``astro-theme-typography``, and I wanted to customize some existing Hugo themes to fit my taste. As I made more and more changes, the theme evolved significantly and became quite different from the original themes I started with. This journey led to the creation of *Mist*, a simple and elegant theme designed to provide a clean and modern blogging experience.
 
-[Demo Site](https://kurokuma-lab.github.io/hugo-theme-mist/)
+![Mist Theme](assets/images/screenshot.png)
+
+<div align="center"><a href="https://kurokuma-lab.github.io/hugo-theme-mist/" target="_blank"><strong>View Demo Site</strong></a></div>
+
 
 ## Features
 
