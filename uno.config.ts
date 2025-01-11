@@ -330,7 +330,10 @@ export default defineConfig({
         .post-content hr {
             margin: var(--section-gap) auto;
             width: 30%;
-            border-top: 2px solid var(--hr-color);
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, #ffffff, var(--hr-color), #ffffff);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         .post-content .katex {
