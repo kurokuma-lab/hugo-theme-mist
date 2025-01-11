@@ -265,7 +265,10 @@
         .post-content hr {
             margin: var(--section-gap) auto;
             width: 30%;
-            border-top: 2px solid var(--hr-color);
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, #ffffff, var(--hr-color), #ffffff);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         .post-content .katex {
@@ -420,6 +423,7 @@
 [content~="\$index\,"]{content:var(--index);}
 [content~="\$length"]{content:var(--length);}
 @media (min-width: 640px){
+[mt~="sm\:4"]{margin-top:1rem;}
 [mt~="sm\:8"]{margin-top:2rem;}
 [max-w~="sm\:640px"]{max-width:640px;}
 [min-h~="sm\:\[calc\(100vh-3rem\)\]"]{min-height:calc(100vh - 3rem);}
@@ -427,6 +431,7 @@
 }
 @media (min-width: 768px){
 [mt~="md\:12"]{margin-top:3rem;}
+[mt~="md\:6"]{margin-top:1.5rem;}
 [max-w~="md\:768px"]{max-width:768px;}
 [min-h~="md\:\[calc\(100vh-5rem\)\]"]{min-height:calc(100vh - 5rem);}
 [p~="md\:6"]{padding:1.5rem;}
@@ -435,6 +440,7 @@
 [mb~="lg\:auto"]{margin-bottom:auto;}
 [mr~="lg\:0"]{margin-right:0;}
 [mt~="lg\:16"]{margin-top:4rem;}
+[mt~="lg\:8"]{margin-top:2rem;}
 [max-w~="lg\:1024px"]{max-width:1024px;}
 [min-h~="lg\:\[calc\(100vh-6rem\)\]"]{min-height:calc(100vh - 6rem);}
 [p~="lg\:8"]{padding:2rem;}
