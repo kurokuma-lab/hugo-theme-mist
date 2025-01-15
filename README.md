@@ -43,7 +43,7 @@ Make sure you have Hugo installed. If not, you can download it from [Hugo's offi
 Clone the theme into your Hugo site's `themes` directory:
 
 ```bash
-git clone https://github.com/kurokuma-lab/hugo-theme-mist.git themes/mist
+git submodule add https://github.com/kurokuma-lab/hugo-theme-mist.git themes/mist
 ```
 
 ### Step 3: Configure the Theme
