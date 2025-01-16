@@ -9,9 +9,9 @@ const themes = {
             'lg': '1280px',
         },
         fontFamily: {
-            serif: ['Source Han Serif SC', 'Linux Libertine', 'STSong', 'Times New Roman', 'serif'],
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Microsoft JhengHei', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-            mono: ['SF Mono', 'SFMono-Regular', 'Consolas', 'monospace'],
+            serif: ['ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
+            sans: ['ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
+            mono: ['ui-monospace', 'SFMono-Regular', 'Menlo, Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace']
         },
         fontSize: {
             base: '1.0625rem', /* 17px */
