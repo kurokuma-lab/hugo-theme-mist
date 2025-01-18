@@ -47,10 +47,11 @@ git submodule add https://github.com/kurokuma-lab/hugo-theme-mist.git themes/mis
 ```
 
 ### Step 3: Configure the Theme
-Copy the example configuration file to your site's root directory:
+Copy the example configuration file and default archetype template file to your site's root directory:
 
 ```bash
 cp themes/mist/exampleSite/hugo.toml .
+cp themes/mist/archetypes/default.md archetypes/
 ```
 
 Adjust the configuration in hugo.toml to fit your needs.
