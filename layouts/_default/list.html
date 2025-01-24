@@ -2,7 +2,7 @@
   <div class="content" p="sm:4 md:6 lg:8">
     <div class="list_with_title" space-y="8">
       {{- $pagersize := .Site.Params.Pagination.archivePagerSize | default 360 }}
-      {{- $pages := .Pages }} 
+      {{- $pages := where .Pages "Draft" "ne" true }}
       {{- $paginator := .Paginate $pages $pagersize }}
       
       <div class="listing_title">

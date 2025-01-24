@@ -1,7 +1,7 @@
 {{- define "main" }}
 <div class="content" p="sm:4 md:6 lg:8">
   {{- $pagersize := .Site.Params.Pagination.homePagerSize | default 4 }}
-  {{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+  {{- $pages := where (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) "Draft" "ne" true }}
   {{- $paginator := .Paginate $pages $pagersize }}
   <div class="posts-container" space-y="16">
     {{- range $paginator.Pages }}

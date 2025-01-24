@@ -1,5 +1,6 @@
 ### Hugo ###
 exampleSite/public
+exampleSite/resources/_gen
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
