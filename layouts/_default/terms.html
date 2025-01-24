@@ -10,23 +10,24 @@
       <div class="tags_list" 
            flex="~ wrap" 
            gap="4">
-        {{- $data := .Data }}
-        {{- range $key, $value := .Data.Terms.ByCount }}
-          {{- if ($value.Name) }}
-            <a href="{{ $data.Plural | absURL }}/{{ $value.Name | urlize }}"
-               text="gray-900 hover:gray-600"
-               decoration="none"
-               border="~ gray-200"
-               rounded="lg"
-               p="2 4"
-               flex="~ items-center"
-               gap="2">
-              {{- $value.Name }}
-              <span text="xs gray-500" 
-                    font="mono">
-                {{- $value.Count }}
-              </span>
-            </a>
+           {{- $terms := .Site.Taxonomies.tags }}
+           {{- range $key, $pages := $terms }}
+             {{- $nonDraftPages := where $pages "Draft" "ne" true }}
+             {{- if gt (len $nonDraftPages) 0 }}
+               <a href="{{ "tags" | absURL }}/{{ $key | urlize }}"
+                  text="gray-900 hover:gray-600"
+                  decoration="none"
+                  border="~ gray-200"
+                  rounded="lg"
+                  p="2 4"
+                  flex="~ items-center"
+                  gap="2">
+                 {{- $key }}
+                 <span text="xs gray-500" 
+                       font="mono">
+                   {{- len $nonDraftPages }}
+                 </span>
+               </a>
           {{- end }}
         {{- end }}
       </div>
