@@ -8,29 +8,29 @@
 
         <div class="socials_icons" flex="~ row" gap="2" justify="center" text="gray-700">
             {{ range $key, $val := .Site.Params.Social }}
-            {{ if $val }}
-            {{ if eq $key "github" }}
-            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:github-fill"></i></a>
-            {{ else if eq $key "twitter-x" }}
-            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:twitter-x-fill"></i></a>
-            {{ else if eq $key "facebook" }}
-            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:facebook-fill"></i></a>
-            {{ else if eq $key "instagram" }}
-            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:instagram-fill"></i></a>
-            {{ else if eq $key "bilibili" }}
-            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:bilibili-fill"></i></a>
-            {{ else if eq $key "youtube" }}
-            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:youtube-fill"></i></a>
-            {{ else if eq $key "telegram" }}
-            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:telegram-fill"></i></a>
-            {{ else if eq $key "discord" }}
-            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:discord-fill"></i></a>
-            {{ else if eq $key "tiktok" }}
-            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:tiktok-fill"></i></a>
-            {{ else if eq $key "weibo" }}
-            <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:weibo-fill"></i></a>
-            {{ end }}
-            {{ end }}
+                {{ if and $val (ne $val "") }}
+                    {{ if eq $key "github" }}
+                    <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:github-fill"></i></a>
+                    {{ else if eq $key "twitter-x" }}
+                    <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:twitter-x-fill"></i></a>
+                    {{ else if eq $key "facebook" }}
+                    <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:facebook-fill"></i></a>
+                    {{ else if eq $key "instagram" }}
+                    <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:instagram-fill"></i></a>
+                    {{ else if eq $key "bilibili" }}
+                    <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:bilibili-fill"></i></a>
+                    {{ else if eq $key "youtube" }}
+                    <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:youtube-fill"></i></a>
+                    {{ else if eq $key "telegram" }}
+                    <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:telegram-fill"></i></a>
+                    {{ else if eq $key "discord" }}
+                    <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:discord-fill"></i></a>
+                    {{ else if eq $key "tiktok" }}
+                    <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:tiktok-fill"></i></a>
+                    {{ else if eq $key "weibo" }}
+                    <a href="{{ $val }}" target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:weibo-fill"></i></a>
+                    {{ end }}
+                {{ end }}
             {{ end }}
             <a href="{{ with .Site.Home.OutputFormats.Get "rss" }}{{ .RelPermalink }}{{ end }}" type="application/rss+xml" title="rss"
               target="_blank" text="gray-500 hover:gray-700"><i class="i-ri:rss-fill"></i></a>
