@@ -47,19 +47,19 @@ enableEmoji = true                             # Enable emoji support
   name = "Kurokuma-lab"
 
 #-----------------------------------------------------------------------------
-# Social Media Links (delete unused ones)
+# Social Media Links (empty link to remove)
 #-----------------------------------------------------------------------------
 [params.social]
-  bilibili = "https://space.bilibili.com/fake-2543"
+  bilibili = ""
   discord = "https://discord.gg/fake-2543"
   facebook = "https://www.facebook.com/profile.php?id=fake-3533"
   github = "https://github.com/fake-user-2131"
   instagram = "https://www.instagram.com/fake_profile_5242/"
   telegram = "https://t.me/fake_channel_2543"
   tiktok = "https://www.tiktok.com/@fake_tiktok_2543"
-  twitter-x = "https://twitter.com/fake_user_2452"
-  weibo = "https://weibo.com/u/fake-3564"
-  youtube = "https://www.youtube.com/channel/fake-2532"
+  twitter-x = ""
+  weibo = ""
+  youtube = ""
 
 #-----------------------------------------------------------------------------
 # Pagination Settings

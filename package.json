@@ -1,6 +1,6 @@
 {
   "name": "hugo-theme-mist",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple Hugo theme that influenced by the astro_theme_typography and hugo-theme-zozo",
   "type": "module",
   "scripts": {
@@ -13,10 +13,10 @@
   "author": "kurokuma",
   "license": "MIT",
   "devDependencies": {
-    "@iconify-json/ri": "^1.2.3",
-    "@iconify/json": "^2.2.280",
-    "@unocss/preset-attributify": "^0.65.0",
-    "@unocss/preset-icons": "^0.65.1",
-    "unocss": "^0.65.1"
+    "@iconify-json/ri": "^1.2.5",
+    "@iconify/json": "^2.2.307",
+    "@unocss/preset-attributify": "^65.5.0",
+    "@unocss/preset-icons": "^65.5.0",
+    "unocss": "^65.5.0"
   }
 }

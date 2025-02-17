@@ -47,7 +47,7 @@ enableEmoji = true                             # Enable emoji support
   name = "Kurokuma-lab"
 
 #-----------------------------------------------------------------------------
-# Social Media Links (delete unused ones)
+# Social Media Links (empty link to remove)
 #-----------------------------------------------------------------------------
 [params.social]
   bilibili = "https://space.bilibili.com/fake-2543"
