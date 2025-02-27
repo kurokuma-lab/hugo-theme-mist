@@ -41,7 +41,7 @@
           <i class="i-ri:price-tag-3-line" ml="2" text="gray-400"></i>
           <div flex="~ gap-2 wrap">
             {{- range . }}
-            <a href="{{ " tags" | absURL }}/{{ . | urlize }}/" text="sm gray-500 hover:gray-700" decoration="none">
+            <a href="{{ "tags" | absURL }}/{{ . | urlize }}/" text="sm gray-500 hover:gray-700" decoration="none">
               #{{- . }}
             </a>
             {{- end }}
